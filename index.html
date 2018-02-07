@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Lab 3</title>
+    <script src="lab3script.js"></script>
+    <style>
+        .dropdown {
+            padding: 10px;
+        }
+
+        .radio {
+            padding: 10px;
+        }
+
+        .birthday {
+            padding: 15px;
+        }
+
+        .quantity {
+            padding: 10px;
+        }
+
+        .second-row {
+            display: inline;
+        }
+        .first-row {
+            padding: 10px;
+        }
+        .reciept {
+
+            border-style: solid;
+            border-color: black;
+            text-align:center;
+        }
+                .not21 {
+            border:solid;
+            border-style: solid;
+            border-color: black;
+            text-align:center;
+        }
+        .container {
+            padding:10%;
+        }
+    </style>
+</head>
+<body onload="displayInfo()">
+    <form class="form-inline">
+        <div>
+            <div class="first-row">
+             <div>
+                Customer Name: <input type="text" id="name" value="Matt" class="form-control" />
+             </div>
+            </div>
+            <div class="second-row">
+                <div class="dropdown">
+                Beverage:
+                    <select id="mySelect">
+                        <option value="Coffee">Coffee</option>
+                        <option value="Tea">Tea</option>
+                        <option value="Beer">Beer</option>
+                        <option value="Wine">Wine</option>
+                    </select>
+                    <div class="radio">
+                        <input type="radio" name="drink_size" value="Small" id="drinkSize" checked>Small
+                        <input type="radio" name="drink_size" value="Medium" id="drinkSize">Medium
+                        <input type="radio" name="drink_size" value="Large" id="drinkSize">Large
+                    </div>
+                    Quantity:<input id="Quantity" type="number" class="form-control quantity" />
+                </div>
+                <div id="BirthdayInput" class="birthday">
+                    Date Of Birth: <input id="Birthday" type="Date" class="form-control" />
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary" onclick="displayInfo()">Submit Order</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="container">
+        <div class="reciept">
+            <div id="reciept">
+                <h1>Reciept</h1>
+                <p id="change1"></p>
+                <p id="change2"></p>
+            </div>
+        </div>
+        <div class="not21">
+            <div id="not21">
+                <h1>Must Be Born Before</h1>
+                <p id="change3"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
